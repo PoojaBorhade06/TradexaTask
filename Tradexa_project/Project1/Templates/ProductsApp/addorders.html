@@ -1,0 +1,17 @@
+{% extends 'UserApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>Add Order</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="post" class="jumbotron">
+        {% csrf_token %}
+        {{form|crispy}}
+      <input type="submit" value="Add Order" class="btn btn-success">
+
+    </form>
+</div>
+{% endblock %}
